@@ -1,7 +1,9 @@
 variable "subnet_id" {
-  description = "The subnet ID for the EC2 instance"
+  description = "The ID of the subnet where the webserver will be deployed"
+  type        = string
 }
 
 variable "security_group_id" {
-  description = "The security group ID for the EC2 instance"
+  description = "The ID of the security group to associate with the webserver"
+  type        = string
 }

@@ -27,7 +27,7 @@ jobs:
         run: terraform init
 
       - name: Terraform plan
-        run: terraform plan -var "subnet_id=${{ secrets.SUBNET_ID }}" -var "security_group_id=${{ secrets.SECURITY_GROUP_ID }}"
+        run: terraform plan -var "subnet_id=${{ secrets.subnet_id }}" -var "security_group_id=${{ secrets.SECURITY_GROUP_ID }}"
 
       - name: Terraform apply
-        run: terraform apply -auto-approve -var "subnet_id=${{ secrets.SUBNET_ID }}" -var "security_group_id=${{ secrets.SECURITY_GROUP_ID }}"
+        run: terraform apply -auto-approve -var "subnet_id=${{ secrets.security_group_id }}" -var "security_group_id=${{ secrets.SECURITY_GROUP_ID }}"
